@@ -22,13 +22,13 @@ Chest_pain_type = st.number_input('Chest Pain Type (CHEST_PAIN_TYPE)', min_value
 
 # Create a dictionary with the input data
 input_data = {
-    'GENDER': Gender,
-    'AGE': age,
-    'BLOOD_PRESSURE': Blood Pressure (mmHg),
-    'CHOLESTEROL': Cholesterol (mg/dL),
-    'DIABETES': Has Diabetes,
-    'SMOKING_STATUS': Smoking Status,
-    'CHEST_PAIN_TYPE': Chest Pain Type
+    'GENDER':Gender,
+    'AGE':age,
+    'BLOOD_PRESSURE':Blood Pressure (mmHg),
+    'CHOLESTEROL':Cholesterol (mg/dL),
+    'DIABETES':Has Diabetes,
+    'SMOKING_STATUS':Smoking Status,
+    'CHEST_PAIN_TYPE':Chest Pain Type
 }
 
 # Convert the dictionary to a DataFrame

@@ -14,7 +14,7 @@ st.write("This app predicts the risk of heart attack/disease based on treatment.
 # Input fields for user to enter feature values
 Gender = st.number_input('Gender (GENDER)', min_value=0.0, max_value=2.0, value=10.0, step=1.0)
 Age = st.number_input('Age (AGE)', min_value=1.0, max_value=100.0, value= 100.0, step=0.1)
-Blood_pressure = st.number_input('Blood Pressure (mmHg) (BLOOD_PRESSURE (mmHg))', min_value=0.0, max_value=150.0,value = 10.0, step=0.1)
+Blood_pressure = st.number_input('Blood Pressure (mmHg) (BLOOD_PRESSURE(mmHg))', min_value=0.0, max_value=150.0,value = 10.0, step=0.1)
 Cholesterol  = st.number_input('Cholesterol (mg/dL) (CHOLESTEROL)', min_value=0.0, max_value=100.0,value = 100.0, step=0.1)
 Diabetes = st.number_input('Has Diabetes (DIABETES)', min_value=0.0, max_value=200.0,value = 200.0, step=1.0)
 Smoking_status = st.number_input('Smoking Status (SMOKING_STATUS)', min_value=0.0, max_value=10.0, value = 10.0, step=1.0)

@@ -13,11 +13,11 @@ st.write("This app predicts the risk of heart attack/disease based on treatment.
 
 # Input fields for user to enter feature values
 # Input field for Gender
-gender = st.selectbox('Select Gender:', options=['Male', 'Female', 'Other'])
+Gender = st.selectbox('Select Gender:', options=['Male', 'Female', 'Other'])
 
 # Encoding the selected gender
 gender_mapping = {'Male': 0, 'Female': 1, 'Other': 2}
-gender_encoded = gender_mapping[gender]
+gender_encoded = gender_mapping[Gender]
 
 Age = st.number_input('Age (AGE)', min_value=1.0, max_value=100.0, value= 100.0, step=0.1)
 BloodPressure = st.number_input('Blood Pressure (mmHg) (BLOOD_PRESSURE(mmHg))', min_value=0.0, max_value=150.0,value = 10.0, step=0.1)
@@ -37,13 +37,13 @@ st.write(f"Encoded Diabetes Value: {diabetes_encoded}")
 
 # Create a dictionary with the input data
 input_data = {
-    'GENDER': Gender,
-    'AGE': age,
-    'BLOOD_PRESSURE': Blood Pressure (mmHg),
-    'CHOLESTEROL': Cholesterol (mg/dL),
-    'DIABETES': Has Diabetes,
-    'SMOKING_STATUS': Smoking Status,
-    'CHEST_PAIN_TYPE': Chest Pain Type
+    'Gender': Gender,
+    'Age': age,
+    'Blood Pressure (mmHg)': BloodPressure,
+    'Cholesterol (mg/dL)': Cholesterol,
+    'Diabetes': Diabetes,
+    'Smoking Status': SmokingStatus,
+    'Chest Pain Type': ChestPainType,
 }
 
 # Convert the dictionary to a DataFrame

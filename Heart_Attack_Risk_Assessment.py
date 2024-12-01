@@ -5,7 +5,7 @@ import pandas as pd
 import joblib
 
 # Load the pre-trained model
-model = joblib.load("HeartRisk.py")  
+model = joblib.load("Downloads/HeartRisk.pkl.py")  
 
 # Set up the Streamlit app
 st.title('Heart Attack Risk Assessment')
@@ -13,11 +13,11 @@ st.write("This app predicts the risk of heart attack/disease based on treatment.
 
 # Input fields for user to enter feature values
 # Input field for Gender
-Gender = st.selectbox('Select Gender:', options=['Male', 'Female', 'Other'])
+gender = st.selectbox('Select Gender:', options=['Male', 'Female', 'Other'])
 
 # Encoding the selected gender
 gender_mapping = {'Male': 0, 'Female': 1, 'Other': 2}
-gender_encoded = gender_mapping[Gender]
+gender_encoded = gender_mapping[gender]
 
 Age = st.number_input('Age (AGE)', min_value=1.0, max_value=100.0, value= 100.0, step=0.1)
 BloodPressure = st.number_input('Blood Pressure (mmHg) (BLOOD_PRESSURE(mmHg))', min_value=0.0, max_value=150.0,value = 10.0, step=0.1)
@@ -41,9 +41,9 @@ input_data = {
     'Age': age,
     'Blood Pressure (mmHg)': BloodPressure,
     'Cholesterol (mg/dL)': Cholesterol,
-    'Diabetes': Diabetes,
+    'Has Diabetes': Diabetes,
     'Smoking Status': SmokingStatus,
-    'Chest Pain Type': ChestPainType,
+    'Chest Pain Type': ChestPainType
 }
 
 # Convert the dictionary to a DataFrame
@@ -53,7 +53,7 @@ input_df = pd.DataFrame([input_data])
 if st.button('Predict Risk Of Heart Attack'):
    attack_prediction = model.predict_proba(input_df)[:, 1]  # Probability of churn
    attack_probability = round(prediction[0] * 100, 2)
-   st.write(f"The predicted heart attack/disease probability is {attack_probability}%")
+    st.write(f"The predicted heart attack/disease probability is {attack_probability}%")
 
 # Option to display input data
 if st.checkbox('Show Input Data'):

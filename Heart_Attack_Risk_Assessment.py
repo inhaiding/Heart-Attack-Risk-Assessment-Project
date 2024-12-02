@@ -5,7 +5,7 @@ import pandas as pd
 import joblib
 
 # Load the pre-trained model
-model = joblib.load("Downloads/HeartRisk.pkl")  
+model = joblib.load("HeartRisk.pkl")  
 
 # Set up the Streamlit app
 st.title('Heart Attack Risk Assessment')

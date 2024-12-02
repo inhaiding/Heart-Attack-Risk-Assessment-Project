@@ -53,7 +53,7 @@ input_df = pd.DataFrame([input_data])
 if st.button('Predict Risk Of Heart Attack'):
    attack_prediction = model.predict_proba(input_df)[:, 1]  # Probability of churn
    attack_probability = round(prediction[0] * 100, 2)
-    st.write(f"The predicted heart attack/disease probability is {attack_probability}%")
+st.write(f"The predicted heart attack/disease probability is {attack_probability}%")
 
 # Option to display input data
 if st.checkbox('Show Input Data'):
